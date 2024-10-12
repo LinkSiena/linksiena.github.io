@@ -1,1 +1,82 @@
-<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ignorami</title><style>*{margin:0;padding:0;box-sizing:border-box}html,body{height:100%}body{display:flex;justify-content:center;align-items:center;background-color:#f0f0f0}.ignorammi{font-size:10vw;font-weight:700;font-family:Arial,sans-serif;color:#333}@media(max-width:600px){.ignorammi{font-size:20vw;padding:0 10px}}</style></head><body><div class="ignorammi">IGNORAMI</div></body></html>
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignorami</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif
+        }
+
+        .ignorammi {
+            font-size: 8vw;
+            font-weight: 600;
+            text-align: center
+        }
+
+        .countdown {
+            font-size: 5vw;
+            font-weight: 500;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s;
+            width: 100%
+        }
+
+        @keyframes blink {
+
+            0%,
+            50%,
+            100% {
+                opacity: 1
+            }
+
+            25%,
+            75% {
+                opacity: 0
+            }
+        }
+
+        .blink {
+            animation: blink 1s step-start infinite
+        }
+
+        @media(max-width:600px) {
+            .ignorammi {
+                font-size: 16vw
+            }
+
+            .countdown {
+                font-size: 10vw;
+                padding: 0 10px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ignorammi">IGNORAMI</div>
+    <div id="countdown" class="countdown"></div>
+    <script>function updateCountdown() { const now = new Date(); const target = new Date('2024-11-24T00:00:00'); const diff = target - now; if (diff <= 0) { const countdownEl = document.getElementById('countdown'); countdownEl.innerHTML = '00:00:00'; countdownEl.classList.add('blink'); countdownEl.style.opacity = 1; return } const totalHours = Math.floor(diff / (1000 * 60 * 60)); const minutes = Math.floor((diff / (1000 * 60)) % 60); const seconds = Math.floor((diff / 1000) % 60); const countdownText = `${totalHours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`; const countdownEl = document.getElementById('countdown'); countdownEl.classList.remove('blink'); countdownEl.style.opacity = 0; void countdownEl.offsetWidth; countdownEl.innerHTML = countdownText; countdownEl.style.opacity = 1 } updateCountdown(); setInterval(updateCountdown, 1000);</script>
+</body>
+
+</html>
