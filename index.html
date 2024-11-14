@@ -1,70 +1,158 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sai chi ti saluta tanto tanto?</title>
     <style>
         body {
-            background-color: #fffbec;
-            color: #3e3e3e;
-            font-family: 'Comic Sans MS', 'Arial', sans-serif;
+            background-color: #fff;
+            color: #000;
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
         }
+
         .container {
             text-align: center;
-            padding: 2rem;
-            border: 2px solid #ff8c00;
+            padding: 1rem;
+            border: 2px solid #ed1e24;
             border-radius: 20px;
-            background: linear-gradient(135deg, #ffdc73, #ff8c00);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         .title {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
         }
+
         .genz-highlight {
             font-weight: bold;
-            color: #f40;
-            animation: color-change 2s infinite alternate;
+            color: #ed1e24;
         }
-        @keyframes color-change {
-            0% { color: #f40; }
-            100% { color: #ff8c00; }
-        }
+
         .vote-link {
             display: inline-block;
-            margin-top: 2rem;
-            padding: 1rem 2rem;
-            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
             text-decoration: none;
             color: #fff;
-            background-color: #ff8c00;
+            background-color: #ed1e24;
             border-radius: 50px;
             transition: background-color 0.3s, transform 0.3s;
         }
+
         .vote-link:hover {
-            background-color: #f40;
+            background-color: #000;
             transform: scale(1.05);
+        }
+
+        .logo-container {
+            margin-top: 1.5rem;
+        }
+
+        .link-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #000;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+        .link-logo .red-k {
+            color: #ed1e24;
+        }
+
+        .link-logo .star {
+            color: #ed1e24;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-size: 1rem;
+        }
+
+        .siena-text {
+            font-size: 1.5rem;
+            color: #000;
+            text-transform: lowercase;
+        }
+
+        /* Media queries per schermi più grandi */
+        @media (min-width: 600px) {
+            .container {
+                padding: 2rem;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .vote-link {
+                font-size: 1.25rem;
+                padding: 1rem 2rem;
+            }
+
+            .link-logo {
+                font-size: 3rem;
+            }
+
+            .siena-text {
+                font-size: 2rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 800px;
+                padding: 3rem;
+            }
+
+            .title {
+                font-size: 2.5rem;
+            }
+
+            .vote-link {
+                font-size: 1.5rem;
+                padding: 1.25rem 2.5rem;
+            }
+
+            .link-logo {
+                font-size: 4rem;
+            }
+
+            .siena-text {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1 class="title">OVVIAMENTE l'associazione studentesca che dovresti decisamente votare alle elezioni del <span class="genz-highlight">26-27-28 novembre</span></h1>
-        <h2 class="genz-highlight">CIOÈ LINK SIENA CHIARAMENTE</h2>
-        <a class="vote-link" href="https://www.instagram.com/linksiena_caoscalmo/">Scopri di più su LINK SIENA</a>
+        <h1 class="title">OVVIAMENTE<br>l'associazione studentesca che dovresti decisamente votare alle elezioni del
+            <span class="genz-highlight">26-27-28 novembre</span>
+        </h1>
+        <h2 class="genz-highlight">CIOÈ <span style="color: #ed1e24;">LINK</span> SIENA CHIARAMENTE</h2>
+        <a class="vote-link" href="https://www.instagram.com/linksiena_caoscalmo/">QUESTO È IL PULSANTE CHE DOVRESTI
+            PREMERE PER ANDARE SULLA PAGINA INSTAGRAM</a>
+        <div class="logo-container">
+            <span class="link-logo">L<span class="star">★</span>IN<span class="red-k">K</span></span> <span
+                class="siena-text">siena</span>
+        </div>
     </div>
     <script>
         // Ecco un piccolo script per far cambiare colore in maniera giocosa al testo.
-        document.addEventListener("DOMContentLoaded", function() {
-            console.log("Sorpresa! Non è 'STO CAZZO', ma è sicuramente qualcosa che vale la pena considerare. Vota Link Siena!");
+        document.addEventListener("DOMContentLoaded", function () {
+            // Sorpresa! Questo è sicuramente qualcosa che vale la pena considerare. Vota Link Siena!
         });
     </script>
 </body>
-</html>
 
+</html>
